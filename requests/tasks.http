@@ -1,0 +1,29 @@
+###
+GET http://localhost:3000/api/tasks HTTP/1.1
+###
+GET http://localhost:3000/api/tasks?page=0&size=4&title=drupal  HTTP/1.1
+###
+POST http://localhost:3000/api/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Hacer un sitio web en drupal 9",
+    "description": "trabajo",
+    "done": true
+}
+###
+GET http://localhost:3000/api/tasks/61672920f8134207bcf97a53 HTTP/1.1
+###
+DELETE http://localhost:3000/api/tasks/61698e2568f57bc974ec4240 HTTP/1.1
+###
+GET http://localhost:3000/api/tasks/done HTTP/1.1
+###
+PUT http://localhost:3000/api/tasks/61698e0d68f57bc974ec423b HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Hacer un sitio web en drupal",
+    "description": "trabajo para practicar con un CMS por primera"
+}
+
+
